@@ -8,15 +8,22 @@ public class Main extends JFrame implements ActionListener {
     JTextField t1, t2;
     JButton b1;
     Main() {
+        //Set TextField
         t1 = new JTextField();
         t1.setBounds(100,100,200,50);
         t2 = new JTextField();
         t2.setBounds(100, 250, 200, 50);
         t2.setEditable(false);
+
+        //Set Button
         b1 = new JButton("Calculate");
         b1.setBounds(100, 400, 100, 50);
         b1.addActionListener(this);
+
+        //Add Components
         add(t1); add(t2); add(b1);
+
+        //Frame Setting
         setSize(800, 800);
         setLayout(null);
         setVisible(true);
