@@ -12,7 +12,7 @@ public class Main extends JFrame implements ActionListener {
         t1 = new JTextField();
         t1.setBounds(100,100,200,50);
         t2 = new JTextField();
-        t2.setBounds(100, 250, 200, 50);
+        t2.setBounds(100, 250, 500, 50);
         t2.setEditable(false);
 
         //Set Button
@@ -35,9 +35,14 @@ public class Main extends JFrame implements ActionListener {
         long b = 0;
         if(e.getSource() == b1) {
             b = factorial(a);
+            if (b <= 0) {
+                String result = "It takes too much value of result number. SORRY :(";
+                t2.setText(result);
+            } else {
+                String result = String.valueOf(b);
+                t2.setText(result);
+            }
         }
-        String result = String.valueOf(b);
-        t2.setText(result);
     }
 
     public long factorial(long number) {
